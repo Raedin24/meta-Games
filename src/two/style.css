@@ -1,0 +1,16 @@
+body{
+    background: url("giff.gif");
+    background-size: cover;
+}
+
+.head{
+
+}
+
+.box{
+    width: 30%;
+    background: blueviolet;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 40px;
+}

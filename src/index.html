@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+            <form class="details">
+                <h2>Sign in</h2>
+                <p>Log in with your student mail</p>
+                <label for="email"></label>
+                <input class="int" type="text" name="email" placeholder="Enter Email..." width="4px" ><br>
+
+                <label for="password"></label>
+                <input class="int" type="password" name="password" placeholder="Enter Password..." ><br>
+
+                <div class="checkbox">
+                <input type="checkbox">     
+                <label for="remember">Remember me</label><br>
+                </div>
+                <a href="next1.html" class="link" target="blank"><button>Login Now</button></a>
+
+              
+                
+
+            </form>
+         <!-- loader -->
+         <div class="container">
+            <div class="transition">
+              <div class="cover cover1"></div>
+              <div class="cover cover2"></div>
+              <div class="cover cover3"></div>
+            </div>
+          </div>
+
+    </section>
+
+    <!-- loader -->
+<script>
+   const link = document.querySelector(".link");
+const transition = document.querySelector(".transition");
+link.addEventListener("click", (e) => {
+  e.preventDefault();
+  transition.classList.add("slide");
+  setTimeout(() => {
+    window.location = link.href;
+  }, 900);
+});
+
+</script>
+</body>
+</html>
+
+
+  
+  

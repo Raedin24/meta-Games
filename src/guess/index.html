@@ -17,12 +17,14 @@
         <input id="userInput" size="55"><br>
         <button id="enterButton">Enter Num</button>
         <button id="againButton">Play again</button>
+        <button id="hintButton" title="Use a hint to find the number!">Hint</button>
   </div>
 </section>
  
   <script>
     var enterButton = document.getElementById('enterButton');
     var againButton = document.getElementById('againButton');
+    var hintButton = document.getElementById('hintButton');
     var output = document.getElementById('outputText');
  
     var randomNumber = Math.ceil(Math.random()*100);
@@ -46,15 +48,33 @@
         output.innerHTML="That's not a number!";
       }
       else{
-        output.innerHTML="Lowe, it has to be between 1 and 100";
+        output.innerHTML="Lower, it has to be between 1 and 100";
       }
  
     }
- 
+      
+      function hintNumber(){
+          var hint = 0;
+          for (let hint = 0, hintButton.click, hint++){
+              if (hint == 1){
+                output.innerHTML = "The number is between " + str(randomNumber - 20) + "and " + str(randomNumber + 10);
+              }
+              else if (hint == 2){
+                  if (randomNumber%2 == 0){
+                      output.innerHTML = "The number is an even number";}
+                  else{
+                      output.innerHTML = "The number is an odd number";}
+              }
+              else{
+                 output.innerHTML = "You have run out of hints!";
+              }
+      }
+          
     enterButton.addEventListener('click', checkNumber);
     againButton.addEventListener('click', function(){
       location.reload();
     })
+    hintButton.addEventListener('click', hintNubmer);
   </script>
 
 </body>
